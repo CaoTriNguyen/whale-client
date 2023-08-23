@@ -1,0 +1,5 @@
+.wrapper {
+    height: 20000px;
+    min-height: calc(100vh - var(--default-layout-header-height) - 20px - var(--default-layout-footer-height));
+    flex: 1;
+}

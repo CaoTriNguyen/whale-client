@@ -1,0 +1,109 @@
+.wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 0px 5px 1px var(--main-color-blur);
+}
+
+.narbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: var(--default-layout-header-height);
+    padding: 0 var(--default-layout-header-padding) 0 var(--default-layout-header-padding);
+    background-color: #fff;
+    border-top: solid 2px var(--main-color);
+    user-select: none;
+    z-index: 10;
+}
+
+.logo {
+    width: var(--default-layout-sidebar-width);
+    height: var(--default-layout-sidebar-width);
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 163px;
+    height: 40px;
+    background-color: var(--main-color-blur);
+    border-radius: 100px;
+}
+
+.sign-up {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    padding-right: 40px;
+    color: var(--main-color);
+    opacity: 0.7;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        opacity: var(--active-opacity);
+    }
+}
+
+.log-in {
+    position: absolute;
+    right: 0;
+    height: 100%;
+
+    &:active {
+        opacity: var(--active-opacity);
+    }
+}
+
+//avatar
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.announcement {
+    color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--main-color-blur);
+    }
+}
+
+.count-announcement {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 25px;
+    overflow: hidden;
+    text-align: center;
+    left: 23px;
+    top: 0px;
+    padding: 1px 3px;
+    background-color: var(--main-color-blur);
+    color: var(--main-color);
+    border: 1px solid var(--main-color-blur);
+    border-radius: 100px;
+    pointer-events: none;
+}

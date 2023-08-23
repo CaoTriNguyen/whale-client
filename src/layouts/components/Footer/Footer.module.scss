@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0 var(--default-layout-header-padding) 0 var(--default-layout-header-padding);
+    height: var(--default-layout-footer-height);
+    width: 100%;
+    bottom: 0;
+
+    .info {
+        display: flex;
+        align-items: center;
+        padding: 0 10px 0 10px;
+        height: 17px;
+        cursor: pointer;
+    }
+
+    .info + .info {
+        border-left: solid 2px #fff;
+    }
+
+    .icon {
+        width: 17px;
+        height: 17px;
+        margin-right: 5px;
+    }
+}

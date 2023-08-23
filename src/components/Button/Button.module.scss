@@ -1,0 +1,40 @@
+.wrapper {
+    cursor: pointer;
+    padding: 8px 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: var(--btn-text-size);
+    color: rgba(0, 0, 0, 1);
+    background-color: transparent;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.primary {
+    color: #fff;
+    background-color: var(--main-color);
+    border: solid 2px var(--main-color);
+}
+
+.outline {
+    background-color: #fff;
+    color: var(--main-color);
+    border: solid 2px var(--main-color);
+
+    &:hover {
+        color: #fff;
+        background-color: var(--main-color);
+    }
+}
+
+.capsule {
+    border-radius: 100px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
