@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: nowrap;
     align-content: center;
-    height: calc(100vh - var(--default-layout-header-height) - 30px);
+    height: calc(100vh - var(--default-layout-header-height));
     width: calc(var(--default-layout-sidebar-width) + var(--default-layout-header-padding) * 2);
     padding-top: 30px;
     color: #fff;
