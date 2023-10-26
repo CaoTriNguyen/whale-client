@@ -7,13 +7,6 @@ const cx = classNames.bind(styles);
 
 function Home() {
     useEffect(() => {
-        // fetch(`http://localhost:5000/api`, {
-        //     mode: 'no-cors',
-        //     method: 'GET',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        // })
         fetch(`http://localhost:5000/api`,{ 
             method: 'GET',
         })
