@@ -36,9 +36,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 163px;
+    width: 170px;
     height: 40px;
-    background-color: var(--main-color-blur);
+    background-color: #fff;
     border-radius: 100px;
 }
 
@@ -46,8 +46,8 @@
     position: absolute;
     left: 0;
     height: 100%;
-    padding-right: 40px;
     color: var(--main-color);
+    background-color: #fff;
     opacity: 0.7;
 
     &:hover {
