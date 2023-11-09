@@ -1,0 +1,18 @@
+.wrapper{
+    background: var(--dark-mode-background-color);
+    width: 100%;
+    height:  100%;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover{
+        background: var(--dark-mode-background-color-hover);
+    }
+
+    .icon{
+        width: 100%;
+        height: 100%;
+        padding: 7px;
+        color: var(--text-color);
+    }
+}

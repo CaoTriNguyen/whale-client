@@ -2,18 +2,17 @@ import classNames from 'classnames/bind';
 
 import Image from '~/components/Image/Image';
 import Search from '~/layouts/components/Search';
-import stypes from './Header.module.scss';
+import styles from './Header.module.scss';
 import Button from '~/components/Button/Button';
 import { BellIcon } from '~/components/icons';
 
-const cx = classNames.bind(stypes);
+const cx = classNames.bind(styles);
 function Header() {
     var currentUser = false;
-
     return (
         <header className={cx('wrapper')}>
-            <div className={cx('narbar')}>
-                <div className={cx('logo')}>logo</div>
+            <div className={cx('navbar')}>
+                <div className={cx('logo')}>Whale</div>
                 <Search />
                 <div className={cx('active')}>
                     {currentUser ? (

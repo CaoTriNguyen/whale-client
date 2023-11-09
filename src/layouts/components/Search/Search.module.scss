@@ -5,8 +5,9 @@
     width: 450px;
     margin: 0px;
     padding: 0 13px 0 10px;
-    border: solid 2px var(--main-color-blur);
+    border: solid 2px var(--search-color);
     border-radius: 100px;
+    background-color: var(--search-color);
 
     .input {
         height: 100%;
@@ -23,49 +24,51 @@
         display: flex;
     }
 
-    &:focus-within {
-        border-color: var(--main-color-blur);
-        box-shadow: 0px 0px 5px 1px var(--main-color-blur);
-    }
-}
+    // &:focus-within {
+    //     border-color: var(--search-color-dark);
+    //     box-shadow: 0px 0px 3px 1px var(--search-color-light);
+    // }
 
-.status {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 15px;
-    height: 20px;
-    right: 10px;
-    color: var(--main-color-blur);
-    cursor: pointer;
+        
+    .status {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 20px;
+        right: 10px;
+        color: var(--search-status-color);
+        cursor: pointer;
 
-    &:hover {
-        color: var(--main-color);
-    }
+        &:hover {
+            color: var(--search-status-color-hover);
+        }
 
-    &:active {
-        color: var(--main-color);
-        opacity: 0.8;
-    }
-}
-
-.search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    padding: 6px;
-    color: var(--main-color-blur);
-    background-color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &:hover {
-        color: var(--main-color);
+        &:active {
+            opacity: 0.8;
+        }
     }
 
-    &:active {
-        opacity: var(--active-opacity);
+    .search-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+        color: var(--text-color);
+        background-color: var(--search-color);
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: 1;
+        }
     }
+
 }

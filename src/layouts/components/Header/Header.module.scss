@@ -7,7 +7,8 @@
     box-shadow: 3px 0px 5px 1px var(--main-color-blur);
 }
 
-.narbar {
+
+.navbar {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -15,20 +16,28 @@
     width: 100vw;
     height: var(--default-layout-header-height);
     padding: 0 var(--default-layout-header-padding) 0 var(--default-layout-header-padding);
-    background-color: #fff;
+    background-color: var(--header-background-color);
     border-top: solid 2px var(--main-color);
     user-select: none;
     z-index: 10;
-}
 
-.logo {
-    width: var(--default-layout-sidebar-width);
-    height: var(--default-layout-sidebar-width);
-    background-color: var(--main-color);
-    color: #fff;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        //width: var(--default-layout-sidebar-width);
+        height: var(--default-layout-sidebar-width);
+        background-color: inherit;
+        color: var(--text-color);
+        border-radius: 5px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
 }
 
 .active {
@@ -36,9 +45,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    width: 160px;
     height: 40px;
-    background-color: #fff;
+    background-color: var(--sign-up-button-background-color);
     border-radius: 100px;
 }
 
@@ -46,8 +55,8 @@
     position: absolute;
     left: 0;
     height: 100%;
-    color: var(--main-color);
-    background-color: #fff;
+    color: var(--sign-up-button-color);
+    background-color: var(--sign-up-button-background-color);
     opacity: 0.7;
 
     &:hover {
@@ -63,7 +72,9 @@
     position: absolute;
     right: 0;
     height: 100%;
-
+    color: var(--login-button-color);
+    background-color: var(--login-button-background-color);
+    border: 0;
     &:active {
         opacity: var(--active-opacity);
     }

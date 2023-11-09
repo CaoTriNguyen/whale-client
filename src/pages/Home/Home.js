@@ -7,11 +7,11 @@ const cx = classNames.bind(styles);
 
 function Home() {
     useEffect(() => {
-        fetch(`http://localhost:5000/api`,{ 
+        fetch(`http://localhost:5000/api`, {
             method: 'GET',
         })
             .then((response) => {
-                console.log(response);
+                //console.log(response);
                 if (!response.ok) {
                     throw new Error(`This is an HTTP error: The status is ${response.status}`);
                 }

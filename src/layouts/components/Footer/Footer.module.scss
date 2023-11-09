@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
-    color: #fff;
+    background-color: var(--footer-background-color);
+    color: var(--footer-color);
     padding: 0 var(--default-layout-header-padding) 0 var(--default-layout-header-padding);
     height: var(--default-layout-footer-height);
     width: 100%;
