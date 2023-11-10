@@ -4,7 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 3px 0px 5px 1px var(--main-color-blur);
+    width: calc(100% - var(--sidebar-width));
+    border-bottom: 1px solid var(--header-border-bottom-color);
 }
 
 
@@ -13,11 +14,11 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: var(--default-layout-header-height);
-    padding: 0 var(--default-layout-header-padding) 0 var(--default-layout-header-padding);
+    padding: 0 calc(var(--sidebar-width) / 2);
     background-color: var(--header-background-color);
-    border-top: solid 2px var(--main-color);
+    border-top: solid 3px var(--sidebar-background-color);
     user-select: none;
     z-index: 10;
 
@@ -27,9 +28,8 @@
         align-items: center;
         align-content: center;
         justify-content: center;
-        //width: var(--default-layout-sidebar-width);
         height: var(--default-layout-sidebar-width);
-        background-color: inherit;
+        background-color: none;
         color: var(--text-color);
         border-radius: 5px;
         text-align: center;

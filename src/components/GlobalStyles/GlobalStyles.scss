@@ -18,16 +18,18 @@
 
     //Header
     --header-background-color: rgb(255, 255, 255);
+    --header-border-bottom-color: rgba(214, 219, 223);
+
     //Sidebar
-    --sidebar-background-color: rgb(235, 237, 239);
+    --sidebar-background-color: rgba(214, 219, 223);
     --sidebar-color:rgb(83,104,120);
-    --sidebar-active-color:rgb(46, 64, 83);
+    --sidebar-active-color:rgb(42, 49, 56);
     --sidebar-width: 60px;
 
     //Search
     --search-font-size-text: 14px;
     --search-height: 40px;
-    --search-color:rgb(235, 237, 239);
+    --search-color:rgba(214, 219, 223);
     --search-status-color: rgb(185, 189, 194);
     --search-status-color-hover: rgb(154, 160, 168);
 
@@ -41,7 +43,7 @@
     --btn-text-size: 14px;
 
     //Dark mode Button
-    --dark-mode-background-color: rgba(214, 219, 223);
+    --dark-mode-background-color: rgba(185, 189, 194, 0.6);
     --dark-mode-background-color-hover: rgb(185, 189, 194);
 
     //Content
@@ -64,15 +66,16 @@
 
 [data-theme="dark"]{
     --text-color: rgba(244, 246, 246);
-    --header-background-color: rgb(46, 64, 83);
+    --header-background-color: rgb(58, 67, 77);
+    --header-border-bottom-color:rgb(58, 67, 77);
     //Search box
     --search-color:rgb(86, 101, 115);
     --search-status-color: rgb(58, 75, 94);
     --search-status-color-hover: rgb(46, 64, 83);
     
     //Dark mode Button
-    --dark-mode-background-color: rgb(109, 123, 134);
-    --dark-mode-background-color-hover: rgb(131, 139, 146);
+    --dark-mode-background-color: rgba(58, 67, 77, 0.6);
+    --dark-mode-background-color-hover: rgb(58, 67, 77);
 
     //Login/ register
     --login-button-background-color: rgba(244, 246, 246);
@@ -81,13 +84,13 @@
     --sign-up-button-color: rgba(244, 246, 246);
 
     //sidebar
-    --sidebar-background-color: rgb(77, 90, 102);
+    --sidebar-background-color: rgb(42, 49, 56);
     --sidebar-color: rgb(229,228,226);
     --sidebar-active-color:rgb(255, 255, 255);
 
     //Content
     --content-color: rgb(255,255,255);
-    --content-background-color:rgb(109, 123, 134);
+    --content-background-color:rgba(58, 67, 77, .9);
 
     //Scroll To Top Button
     --scroll-top-color: rgb(229,228,226);

@@ -6,9 +6,8 @@
     align-items: center;
     flex-wrap: nowrap;
     align-content: center;
-    height: calc(100vh - var(--default-layout-header-height));
+    height: 100vh;
     width: var(--sidebar-width);
-    padding-top: 20px;
     color: var(--sidebar-color);
     background-color: var(--sidebar-background-color);
     overflow: hidden;
@@ -30,7 +29,7 @@
     flex-wrap: nowrap;
     width: var(--sidebar-width);
     height: var(--sidebar-width);
-    padding: 13px;
+    padding: 15px;
     color: var(--sidebar-color);
     opacity: var(--active-opacity);
     cursor: pointer;

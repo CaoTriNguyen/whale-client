@@ -1,11 +1,10 @@
 .wrapper {
     display: flex;
-    padding-top: calc(var(--default-layout-header-height));
+    margin-left: var(--sidebar-width);
 }
 
 .content {
     left: 0;
-    margin-left: var(--sidebar-width);
     flex: 1;
     color: var(--content-color);
     background-color: var(--content-background-color);

@@ -13,9 +13,9 @@ const { default: Header } = require('../components/Header/Header');
 function DefaultLayout({ children }) {
     return (
         <div>
-            <Header />
+            <Sidebar className={cx('sidebar')} />
             <div className={cx('wrapper')}>
-                <Sidebar className={cx('sidebar')} />
+                <Header />
                 <div className={cx('content')}>{children}</div>
             </div>
             <ScrollToTop />
