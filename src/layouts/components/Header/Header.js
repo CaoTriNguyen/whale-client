@@ -30,10 +30,10 @@ function Header() {
                             </>
                         ) : (
                             <>
-                                <Button capsule className={cx('sign-up')}>
+                                <Button href="/signup" capsule className={cx('sign-up')}>
                                     Sign up
                                 </Button>
-                                <Button primary capsule className={cx('log-in')}>
+                                <Button href="/login" primary capsule className={cx('log-in')}>
                                     Log in
                                 </Button>
                             </>

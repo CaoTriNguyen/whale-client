@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    margin-left: var(--sidebar-width);
+}
+
+.content {
+    left: 0;
+    flex: 1;
+    color: var(--content-color);
+    min-height: calc(100vh - var(--default-layout-footer-height));
+}

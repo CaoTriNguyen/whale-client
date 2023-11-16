@@ -7,5 +7,6 @@
     left: 0;
     flex: 1;
     color: var(--content-color);
-    background-color: var(--content-background-color);
+    padding-top: var(--default-layout-header-height);
+    min-height: calc(100vh - var(--default-layout-footer-height));
 }

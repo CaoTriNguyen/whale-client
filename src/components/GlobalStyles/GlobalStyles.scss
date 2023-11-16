@@ -62,6 +62,9 @@
     //Footer
     --footer-background-color: rgb(235, 237, 239);
     --footer-color:rgb(83,104,120);
+
+    //login page
+    --login-background-color: rgb(235, 235, 235);
 }
 
 [data-theme="dark"]{
@@ -121,6 +124,8 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     overflow-y: overlay;
+    min-height: 100vh;
+    background-color: var(--content-background-color);
 }
 
 // Scrollbar CSS
