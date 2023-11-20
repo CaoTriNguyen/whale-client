@@ -1,10 +1,15 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { useToken } from './store';
+
 import { publicRoutes } from './routes/routes';
 import DefaultLayout from '~/layouts';
+import Login from './pages/Login';
 
 function App() {
+    const { token, setToken } = useToken();
+
     return (
         <Router>
             <Routes>
@@ -23,7 +28,8 @@ function App() {
                             path={route.path}
                             element={
                                 <Layout>
-                                    <Page />
+                                    {route.component === Login && !token && <Page setToken={setToken} />}
+                                    {route.component !== Login && <Page setToken={setToken} />}
                                 </Layout>
                             }
                         />
