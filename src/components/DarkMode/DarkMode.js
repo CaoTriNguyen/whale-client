@@ -9,7 +9,9 @@ const cx = classNames.bind(styles);
 function DarkMode() {
     // eslint-disable-next-line
     const [state, dispatch] = useTheme();
-    const [darkTheme, setDarkTheme] = useState(state.theme === 'dark');
+    const [darkTheme, setDarkTheme] = useState(localStorage.theme === 'dark');
+    document.querySelector('body').setAttribute('data-theme', localStorage.theme);
+
     return (
         <div
             className={cx('wrapper')}
@@ -17,6 +19,7 @@ function DarkMode() {
                 await dispatch(actions.setTodoTheme(darkTheme ? 'light' : 'dark'));
                 setDarkTheme(state.theme === 'dark');
                 document.querySelector('body').setAttribute('data-theme', state.theme);
+                localStorage.theme = state.theme;
             }}
         >
             {darkTheme && <SunIcon className={cx('icon')} />}
