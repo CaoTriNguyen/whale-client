@@ -5,17 +5,21 @@ import Search from '~/layouts/components/Search';
 import styles from './Header.module.scss';
 import Button from '~/components/Button/Button';
 import { BellIcon } from '~/components/icons';
+import { useToken } from '~/store';
 
 const cx = classNames.bind(styles);
 function Header() {
-    var currentUser = false;
+    //var currentUser = false;
+    // eslint-disable-next-line
+    const { token, setToken } = useToken();
+    console.log(token);
     return (
         <header className={cx('wrapper')}>
             <div className={cx('navbar')}>
                 <div className={cx('logo')}>Whale</div>
                 <Search />
                 <div className={cx('active')}>
-                    {currentUser ? (
+                    {token ? (
                         <>
                             <BellIcon width="22px" height="22px" className={cx('announcement')} />
                             <div className={cx('count-announcement')}>9+</div>

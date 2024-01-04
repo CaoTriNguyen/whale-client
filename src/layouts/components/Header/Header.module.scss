@@ -43,11 +43,11 @@
 .active {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 160px;
     height: 40px;
-    background-color: var(--sign-up-button-background-color);
+    //background-color: var(--sign-up-button-background-color);
     border-radius: 100px;
 }
 
@@ -55,6 +55,7 @@
     position: absolute;
     left: 0;
     height: 100%;
+    width: 100%;
     color: var(--sign-up-button-color);
     background-color: var(--sign-up-button-background-color);
     opacity: 0.7;
@@ -89,16 +90,16 @@
 }
 
 .announcement {
-    color: var(--main-color);
+    color: var(--sidebar-active-color);
     width: 40px;
     height: 40px;
     margin-right: 15px;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
     cursor: pointer;
 
     &:hover {
-        background-color: var(--main-color-blur);
+        background-color: var(--sidebar-background-color);
     }
 }
 
@@ -109,12 +110,12 @@
     height: 25px;
     overflow: hidden;
     text-align: center;
-    left: 23px;
+    right: 43px;
     top: 0px;
     padding: 1px 3px;
-    background-color: var(--main-color-blur);
-    color: var(--main-color);
-    border: 1px solid var(--main-color-blur);
+    background-color: var(--primary);
+    color: var(--while);
+    border: 1px solid var(--primary);
     border-radius: 100px;
     pointer-events: none;
 }

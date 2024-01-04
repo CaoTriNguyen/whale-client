@@ -5,11 +5,12 @@
     --main-color: rgb(30, 144, 255);
     --main-color-blur: rgba(30, 144, 255, 0.3);
     --while: #fff;
+    --primary: #dc143c;
     --text-color: rgba(22, 24, 35);
     --active-opacity: 0.7;
 
     //Default layout
-    --default-layout-header-height: 55px;
+    --default-layout-header-height: 50px;
     --default-layout-header-padding: 40px;
     --default-layout-footer-height: 30px;
     --default-layout-width: 1150px;
@@ -24,10 +25,10 @@
     --sidebar-background-color: rgba(214, 219, 223);
     --sidebar-color:rgb(83,104,120);
     --sidebar-active-color:rgb(42, 49, 56);
-    --sidebar-width: 60px;
+    --sidebar-width: 50px;
 
     //Search
-    --search-font-size-text: 14px;
+    --search-font-size-text: 16px;
     --search-height: 40px;
     --search-color:rgba(214, 219, 223);
     --search-status-color: rgb(185, 189, 194);
@@ -40,7 +41,7 @@
     --sign-up-button-color: rgba(22, 24, 35);
 
     //button
-    --btn-text-size: 14px;
+    --btn-text-size: 16px;
 
     //Dark mode Button
     --dark-mode-background-color: rgba(185, 189, 194, 0.6);
@@ -115,12 +116,12 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     overflow-y: overlay;
@@ -170,7 +171,7 @@ body {
     .tippy-box {
         border-radius: 8px;
         font-weight: 550;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 14px;
         background-color: rgba(84, 84, 84, 0.92);
     }
