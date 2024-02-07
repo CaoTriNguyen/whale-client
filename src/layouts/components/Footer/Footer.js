@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import { PhoneIcon, LocationIcon, GmailIcon } from '~/components/icons';
+import { PhoneIcon, LocationIcon, EmailIcon } from '~/components/icons';
 import styles from './Footer.module.scss';
 
 const cx = classNames.bind(styles);
@@ -17,7 +17,7 @@ function Footer() {
 
             <div className={cx('info')}>
                 <div className={cx('icon')}>
-                    <GmailIcon width="17px" height="17px" />
+                    <EmailIcon width="17px" height="17px" />
                 </div>
                 <label className={cx('label')}>wsearch@gmail.com</label>
             </div>

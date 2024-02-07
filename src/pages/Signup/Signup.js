@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import Button from '~/components/Button';
@@ -11,7 +11,7 @@ import {
     UserIcon,
     FirstNameIcon,
     LastNameIcon,
-    GmailIcon,
+    EmailIcon,
     BirthdayIcon,
 } from '~/components/icons';
 
@@ -19,9 +19,9 @@ import styles from './Signup.module.scss';
 
 const cx = classNames.bind(styles);
 
-async function loginUser(credentials) {
+async function signupUser(credentials) {
     //console.log(credentials);
-    return fetch(`http://localhost:5000/api/user/login`, {
+    return fetch(`http://localhost:5000/api/user/signup`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -30,11 +30,11 @@ async function loginUser(credentials) {
     }).then((data) => data.json());
 }
 
-function Login({ setToken }) {
+function Signup() {
     const [username, setUsername] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [gmail, setGmail] = useState('');
+    const [email, setEmail] = useState('');
     const [birthday, setBirthday] = useState(new Date('2000-01-01'));
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -55,17 +55,26 @@ function Login({ setToken }) {
         setRePassword(event.target.value);
     };
 
-    const handleLogin = async (e) => {
+    const handleSignup = async (e) => {
         e.preventDefault();
 
-        const token = await loginUser({
+        const result = await signupUser({
             username,
+            firstName,
+            lastName,
+            email,
+            birthday,
             password,
         });
-        //console.log(token);
-        navigate(-1);
 
-        setToken(token);
+        if (result.data.affectedRows > 0) {
+            alert('User have been created successfully!');
+        } else {
+            alert('Create new user failed!');
+        }
+        //console.log(token);
+        //navigate(-1);
+        //setToken(token);
     };
 
     return (
@@ -107,13 +116,13 @@ function Login({ setToken }) {
                     />
                 </div>
                 <div className={cx('item')}>
-                    <GmailIcon className={cx('icon')} />
+                    <EmailIcon className={cx('icon')} />
                     <input
                         className={cx('username')}
-                        value={gmail}
-                        placeholder="Gmail"
+                        value={email}
+                        placeholder="Email"
                         onChange={(e) => {
-                            setGmail(e.target.value);
+                            setEmail(e.target.value);
                         }}
                     />
                 </div>
@@ -122,7 +131,7 @@ function Login({ setToken }) {
                     <input
                         className={cx('username')}
                         type="date"
-                        value={birthday.getFullYear + '-' + birthday.getMonth}
+                        value={birthday}
                         placeholder="Birthday"
                         onChange={(e) => {
                             setBirthday(e.target.value);
@@ -158,11 +167,11 @@ function Login({ setToken }) {
                         {showRePassword && <EyeSlashIcon />}
                     </div>
                 </div>
-                <Button className={cx('login-btn')} onClick={handleLogin}>
+                <Button className={cx('signup-btn')} onClick={handleSignup}>
                     Sign Up
                 </Button>
                 <div className={cx('line')}></div>
-                <Button href="./login" className={cx('signup-btn')}>
+                <Button href="./login" className={cx('login-btn')}>
                     Login
                 </Button>
             </div>
@@ -170,8 +179,4 @@ function Login({ setToken }) {
     );
 }
 
-Login.propTypes = {
-    setToken: PropTypes.func.isRequired,
-};
-
-export default Login;
+export default Signup;

@@ -13,8 +13,8 @@ function SidebarFooterLayout({ children }) {
             <Sidebar className={cx('sidebar')} />
             <div className={cx('wrapper')}>
                 <div className={cx('content')}>{children}</div>
+                <Footer />
             </div>
-            <Footer />
         </div>
     );
 }

@@ -1,11 +1,14 @@
 .wrapper {
     display: flex;
+    flex-direction: column;
     margin-left: var(--sidebar-width);
+    min-height: 100vh;
 }
 
 .content {
+    display: flex;
+    align-items: center;
     left: 0;
     flex: 1;
     color: var(--content-color);
-    min-height: calc(100vh - var(--default-layout-footer-height));
 }

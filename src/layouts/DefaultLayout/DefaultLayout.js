@@ -17,9 +17,9 @@ function DefaultLayout({ children }) {
             <div className={cx('wrapper')}>
                 <Header />
                 <div className={cx('content')}>{children}</div>
+                <Footer />
             </div>
             <ScrollToTop />
-            <Footer />
         </div>
     );
 }

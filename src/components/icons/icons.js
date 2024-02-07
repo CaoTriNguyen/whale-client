@@ -100,7 +100,7 @@ export const FacebookIcon = ({ width = '1.4rem', height = '1.4rem', className })
     </svg>
 );
 
-export const GmailIcon = ({ width = '1.4rem', height = '1.4rem', className }) => (
+export const EmailIcon = ({ width = '1.4rem', height = '1.4rem', className }) => (
     <svg
         className={className}
         width={width}

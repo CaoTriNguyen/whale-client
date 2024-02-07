@@ -42,11 +42,13 @@
     &.active:hover {
         color: var(--sidebar-active-color);
         opacity: 1;
+        background-color: var(--dark-mode-background-color);
     }   
 
     &:hover {
         opacity: var(--active-opacity);
         opacity: 1;
+        background-color: var(--dark-mode-background-color);
     }
 }
 
